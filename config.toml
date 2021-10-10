@@ -89,7 +89,7 @@ disableHugoGeneratorInject = false
   [[menu.main]]
     identifier = "Seguridad"
     name       = "Seguridad"
-    url        = "content/seguridad/"
+    url        = "seguridad/"
   [[menu.main]]
     identifier = "sistemas"
     name       = "Sistemas"
