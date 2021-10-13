@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Antonio Castro Díaz ">
+<meta name="description" content="IES Gonzalo Nazareno Administración de Sistemas Informáticos en Red Instalación de Debian 11 en el equipo de trabajo
+Autor: Antonio Castro Díaz
+1.- Introducción
+En está practica desarrollaremos la instalación de Debian 11 en nuestro equipo de trabajo.
+Lo primero fue descargar la imagen ISO de Debian 11 de la página oficial para la arquitectura amd64.
+Una vez descargada la imagen, bootearemos un USB utilizando el programa Rufus. Cuando tengamos preparado el USB, apagamos el equipo y lo volvemos a iniciar, pero esta vez entrando en la BIOS para entrar en el apartado BOOT para elegir el pendrive como primera opción, para que cuando arranque inicie el instalador de Debian 11." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://antoniocastro.netlify.app/sistemas/instalaci%C3%B3n_debian11/" />
+
+
+    <title>
+        
+            Instalación de Debian 11 en el equipo de trabajo :: Blog de Antonio 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://antoniocastro.netlify.app/main.29c2c8c3fc9cf748254138351f142ac2833b208a68e83aec126edc98b59efef2.css">
+
+
+
+
+
+
+<meta itemprop="name" content="Instalación de Debian 11 en el equipo de trabajo">
+<meta itemprop="description" content="IES Gonzalo Nazareno Administración de Sistemas Informáticos en Red Instalación de Debian 11 en el equipo de trabajo
+Autor: Antonio Castro Díaz
+1.- Introducción
+En está practica desarrollaremos la instalación de Debian 11 en nuestro equipo de trabajo.
+Lo primero fue descargar la imagen ISO de Debian 11 de la página oficial para la arquitectura amd64.
+Una vez descargada la imagen, bootearemos un USB utilizando el programa Rufus. Cuando tengamos preparado el USB, apagamos el equipo y lo volvemos a iniciar, pero esta vez entrando en la BIOS para entrar en el apartado BOOT para elegir el pendrive como primera opción, para que cuando arranque inicie el instalador de Debian 11."><meta itemprop="datePublished" content="2021-10-09T13:30:39+03:00" />
+<meta itemprop="dateModified" content="2021-10-09T13:30:39+03:00" />
+<meta itemprop="wordCount" content="426">
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Instalación de Debian 11 en el equipo de trabajo"/>
+<meta name="twitter:description" content="IES Gonzalo Nazareno Administración de Sistemas Informáticos en Red Instalación de Debian 11 en el equipo de trabajo
+Autor: Antonio Castro Díaz
+1.- Introducción
+En está practica desarrollaremos la instalación de Debian 11 en nuestro equipo de trabajo.
+Lo primero fue descargar la imagen ISO de Debian 11 de la página oficial para la arquitectura amd64.
+Una vez descargada la imagen, bootearemos un USB utilizando el programa Rufus. Cuando tengamos preparado el USB, apagamos el equipo y lo volvemos a iniciar, pero esta vez entrando en la BIOS para entrar en el apartado BOOT para elegir el pendrive como primera opción, para que cuando arranque inicie el instalador de Debian 11."/>
+
+
+
+
+    <meta property="og:title" content="Instalación de Debian 11 en el equipo de trabajo" />
+<meta property="og:description" content="IES Gonzalo Nazareno Administración de Sistemas Informáticos en Red Instalación de Debian 11 en el equipo de trabajo
+Autor: Antonio Castro Díaz
+1.- Introducción
+En está practica desarrollaremos la instalación de Debian 11 en nuestro equipo de trabajo.
+Lo primero fue descargar la imagen ISO de Debian 11 de la página oficial para la arquitectura amd64.
+Una vez descargada la imagen, bootearemos un USB utilizando el programa Rufus. Cuando tengamos preparado el USB, apagamos el equipo y lo volvemos a iniciar, pero esta vez entrando en la BIOS para entrar en el apartado BOOT para elegir el pendrive como primera opción, para que cuando arranque inicie el instalador de Debian 11." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://antoniocastro.netlify.app/sistemas/instalaci%C3%B3n_debian11/" /><meta property="article:section" content="sistemas" />
+<meta property="article:published_time" content="2021-10-09T13:30:39+03:00" />
+<meta property="article:modified_time" content="2021-10-09T13:30:39+03:00" />
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2021-10-09 13:30:39 &#43;0300 &#43;0300" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://antoniocastro.netlify.app/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">ASIR</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://antoniocastro.netlify.app/base/">Base de datos</a></li><li><a href="https://antoniocastro.netlify.app/hlc/">HLC</a></li><li><a href="https://antoniocastro.netlify.app/implantacion/">Implantación</a></li><li><a href="https://antoniocastro.netlify.app/seguridad/">Seguridad</a></li><li><a href="https://antoniocastro.netlify.app/servicios/">Servicios</a></li><li><a href="https://antoniocastro.netlify.app/sistemas/">Sistemas</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://antoniocastro.netlify.app/sistemas/instalaci%C3%B3n_debian11/">Instalación de Debian 11 en el equipo de trabajo</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <p>IES Gonzalo Nazareno
+Administración de Sistemas Informáticos en Red
+Instalación de Debian 11 en el equipo de trabajo</p>
+<p>Autor: Antonio Castro Díaz</p>
+<p>1.- Introducción</p>
+<p>En está practica desarrollaremos la instalación de Debian 11 en nuestro equipo de trabajo.</p>
+<p>Lo primero fue descargar la imagen ISO de Debian 11 de la página oficial para la arquitectura amd64.</p>
+<p>Una vez descargada la imagen, bootearemos un USB utilizando el programa Rufus. Cuando tengamos preparado el USB, apagamos el equipo y lo volvemos a iniciar, pero esta vez entrando en la BIOS para entrar en el apartado BOOT para elegir el pendrive como primera opción, para que cuando arranque inicie el instalador de Debian 11.</p>
+<p>El siguiente paso será guardar los cambios y salir de la BIOS. Cuando salgamos ya se arrancará el instalador.</p>
+<p>2 Instalación</p>
+<p>En cuanto se nos muestre el menú del instalador, seleccionaremos la opción de instalación gráfica e iremos eligiendo nuestras preferencias sobre idioma, ubicación y configuración del teclado. Daremos nombre a la máquina, crearemos la contraseña del superusuario y configuraremos el usuario normal.</p>
+<p>Cuando acabemos la configuración de los usuarios pasaremos a configurar el Gestor de Volúmenes Lógicos (LVM) que sirve para poder gestionar el almacenamiento de nuestro equipo. En mi caso el equipo que utilizo solo va a tener instalado Debian 11 como sistema operativo, por lo que utilizare todo el disco. Como vamos a utilizar el equipo como servidor, lo haremos manual y crearemos una tabla de particiones al estar el disco vacío. Crearemos un grupo de volúmenes donde iremos añadiendo los volumenes logicos necesarios para la raíz, la swap y las carpetas var, tmp y home.
+3 Configuración</p>
+<p>Por ultimo,después de la instalación del sistema base, elegiremos el país para la réplica de Debian, el repositorio, etc.. Después, se ejecutará Tasksel y seleccionaremos los programas que instalar. Instalaremos el Entorno de escritorio Debian, las utilidades estandar y el SSH Server del sistema, que utilizaremos a lo largo del curso. Una vez seleccionados, continuaremos e instalaremos los programas.</p>
+<p>Cuando finalice, se reiniciara el equipo y volveremos a entrar en la BIOS para dejar la configuración de arranque como la teníamos al principio.</p>
+<p>En mi caso, el siguiente paso fue entrar en la pagina <a href="https://linux-hardware.org/">https://linux-hardware.org/</a> y crearemos una prueba con el siguiente comando:</p>
+<p>sudo -E hw-probe -all -upload</p>
+<p>El cual nos examinará si los drivers de nuestros componentes están funcionando correctamente.</p>
+<p>En mi caso, los drivers de la tarjeta gráfica no estaban actualizados, los cuales actualice descargando los drivers desde la pagina oficial de la tarjeta gráfica. Con esto damos por finalizada la instalación.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2021</span>
+            <span><a href="https://antoniocastro.netlify.app/">Antonio Castro Díaz</a></span>
+            <span>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</span>
+            <span><a href="https://antoniocastro.netlify.app/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span><span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="https://antoniocastro.netlify.app/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+
+
+
+    </body>
+</html>

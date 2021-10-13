@@ -1,0 +1,112 @@
+baseURL = "https://antoniocastro.netlify.app/"
+title   = "Blog de Antonio"
+languageCode = "es-ES"
+theme = "hello-friend"
+
+
+paginate  = 10
+rssLimit  = 10  
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." 
+
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+pluralizelisttitles = false 
+buildDrafts  = false
+buildFuture  = false
+buildExpired = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+
+[author]
+  name = "Antonio Castro Díaz"
+
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+  series   = "series"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+  
+
+  homeSubtitle = "Este blog es una práctica para la asignatura de implantación de aplicaciones web en la que iré publicando alguna de mis prácticas"
+
+  colortheme = "light"
+
+
+  enableSharingButtons = true
+
+  justifyContent = false  # Set "text-align: justify" to .post-content.
+
+  [params.footer]
+    trademark = true
+    rss = true
+    copyright = true
+    author = true
+
+
+    bottomText = [
+      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
+      "Made with &#10084; by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"
+    ]
+
+
+
+  [params.logo]
+    logoMark     = ">"
+    logoText     = "ASIR"
+    logoHomeLink = "/"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:antoniocastro-@hotmail.com"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/antoniocastro98"
+
+
+
+
+[menu]
+  [[menu.main]]
+    identifier = "Seguridad"
+    name       = "Seguridad"
+    url        = "seguridad/"
+  [[menu.main]]
+    identifier = "sistemas"
+    name       = "Sistemas"
+    url        = "sistemas/"
+  [[menu.main]]
+    identifier = "Base de datos"
+    name       = "Base de datos"
+    url        = "base/"
+  [[menu.main]]
+    identifier = "IAW"
+    name       = "Implantación"
+    url        = "implantacion/"
+  [[menu.main]]
+    identifier = "SAD"
+    name       = "Servicios"
+    url        = "servicios/"
+  [[menu.main]]
+    identifier = "HLC"
+    name       = "HLC"
+    url        = "hlc/"
